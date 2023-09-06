@@ -35,21 +35,22 @@ const Weather = () => {
   
 
   return (
-    <div>
-        <div>
-            <h1>Weather App</h1>
-        </div>
+    <div className='box-border h-50 w-50 p-4 border-4 text-center justify-center items-center'>
       <div>
-      <input
-        type="text"
-        placeholder="Enter city name"
-        id="city"
-        name="city"
-        onChange={handleChange}
-        value={city}
-        // onChange={(e) => setCity(e.target.value)}
-      />
-      <button onClick={handleClick}>  Search</button>
+        <h1 className='text-2xl underline'>Weather App</h1>
+      </div>
+      <div className='mt-10'>
+        <input
+          type="text"
+          placeholder="Enter city name"
+          id="city"
+          name="city"
+          onChange={handleChange}
+          value={city}
+        />
+      </div>
+      <div>
+        <button className='text-xl bg-black rounded-md text-stone-50' onClick={handleClick}>Search</button>
       </div>
       
       {weatherData && (
